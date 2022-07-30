@@ -1,0 +1,83 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.branding {
+    color: greenyellow;
+}
+
+.main-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(green, teal, lightblue);
+}
+
+.calculator-body {
+    width: 600px;
+    height: 800px;
+    background-color: black;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.result-panel {
+    width: 540px;
+    height: 150px;
+    background-color: rgb(47, 69, 16);
+    color: greenyellow;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.result-value {
+    font-size: 42px;
+    margin-inline: 30px;
+    margin-block: 20px;
+}
+
+.keypad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numberpad {
+    width: 270px;
+    height: 500px;
+    }
+
+.operatorpad {
+    width: 270px;
+    height: 500px;
+}
+
+.numberPadButton {
+    display:flex; 
+    justify-content:center; 
+    align-items:center;
+    color: greenyellow;
+    border:2px solid rgb(47, 69, 16); 
+    box-sizing:border-box;
+    font-size: 42px;
+}
+
+.operatorPadButton {
+    display:flex; 
+    justify-content:center; 
+    align-items:center;
+    color: orange;
+    border:2px solid rgb(47, 69, 16); 
+    box-sizing:border-box;
+    font-size: 42px;
+}

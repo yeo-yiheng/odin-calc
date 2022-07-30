@@ -69,6 +69,12 @@ for (let row = 0; row < numberPadRows; row++) {
         newColumn.setAttribute("style", `width:${numberButtonWidth}px; height:${numberButtonHeight}px;`);
         newColumn.classList.add("numberPadButton");
         newColumn.addEventListener("click", e => {
+            let audioTap = new Audio("./assets/mixkit-typewriter-soft-click-1125.wav");
+            audioTap.play();
+            newColumn.style.backgroundColor = "seagreen";
+            setTimeout(() => {
+                newColumn.style.backgroundColor = "";
+            }, 100);
             let currentText = result.textContent;
             let button = newColumn.firstChild.textContent;
             let substituteText;
@@ -112,7 +118,15 @@ for (let row = 0; row < operatorPadRows; row++) {
         let newColumn = document.createElement("div");
         newColumn.setAttribute("style", `width:${operatorButtonWidth}px; height:${operatorButtonHeight}px;`);
         newColumn.classList.add("operatorPadButton");
+        let textNode = document.createTextNode(`${operatorArr[operatorCounter]}`);
+        newColumn.appendChild(textNode);
         newColumn.addEventListener("click", e => {
+            let audioTap = new Audio("./assets/mixkit-hard-typewriter-click-1119.wav");
+            audioTap.play();
+            newColumn.style.backgroundColor = "tan";
+            setTimeout(() => {
+                newColumn.style.backgroundColor = "";
+            }, 100);
             let currentText = result.textContent;
             let button = newColumn.firstChild.textContent;
             let substituteText;
@@ -148,8 +162,6 @@ for (let row = 0; row < operatorPadRows; row++) {
                 }
             }
         });
-        let textNode = document.createTextNode(`${operatorArr[operatorCounter]}`);
-        newColumn.appendChild(textNode);
         newRow.append(newColumn);
         operatorCounter++;
         if (row == operatorPadRows - 1) {
